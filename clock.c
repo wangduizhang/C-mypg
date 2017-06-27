@@ -85,10 +85,7 @@ struct time updatetimedrop(struct time gettime)
 char choice_(void)
 {
     char choi;
-    bool r;
-
-
-
+    bool r = true;
     printf("- - - - - - - - - - - - - - - - - - - - - - \n");
     printf("             《简易计时器》\n");
     printf("- - - - - - - - - - - - - - - - - - - - - - \n");
@@ -96,7 +93,7 @@ char choice_(void)
     printf("       0.退出程序 1.正计时 2.倒计时\n");
     printf("- - - - - - - - - - - - - - - - - - - - - - \n");
     
-    do{
+    while(r){
 		r = false;
 		scanf ("%c", &choi);
     	switch(choi){
@@ -111,12 +108,12 @@ char choice_(void)
     	   		printf("             ***倒计时模式***\n");
     	   		printf("- - - - - - - - - - - - - - - - - - - - - - \n");
     	   		break;
-    		default:
+    		default:{
     	   		r = true;
-    	if (r == true)
-    	    printf("错误的指令！\n");
+    	        printf("错误的指令！\n");
+            }
         }
-    }while(r);
+    }
 
 return choi;
 }
