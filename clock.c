@@ -218,7 +218,7 @@ int main(void)
 	    	gettime = lasttime;
 	    	
 	    	if (lasttime.h==0 && lasttime.m==0 && lasttime.s==0){
-	    		printf("！！！时间到！！！\n");
+	    		printf("\a！！！ 时间到！！！\n");
 	    		break;
 	    	}
          }
